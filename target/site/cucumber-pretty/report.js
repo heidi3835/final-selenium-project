@@ -1,9 +1,9 @@
-$(document).ready(function() {var formatter = new CucumberHTML.DOMFormatter($('.cucumber-report'));formatter.uri("darksky.feature");
+$(document).ready(function() {var formatter = new CucumberHTML.DOMFormatter($('.cucumber-report'));formatter.uri("hotelscom.feature");
 formatter.feature({
   "line": 3,
-  "name": "Verify dark sky feature",
+  "name": "Verify hotels.com feature",
   "description": "",
-  "id": "verify-dark-sky-feature",
+  "id": "verify-hotels.com-feature",
   "keyword": "Feature",
   "tags": [
     {
@@ -16,12 +16,12 @@ formatter.feature({
     },
     {
       "line": 1,
-      "name": "@control"
+      "name": "@hotels"
     }
   ]
 });
 formatter.before({
-  "duration": 3782954610,
+  "duration": 4361282145,
   "status": "passed"
 });
 formatter.background({
@@ -32,45 +32,69 @@ formatter.background({
   "keyword": "Background"
 });
 formatter.scenario({
-  "line": 25,
-  "name": "Verify Current Temperature should not be greater or less than the Temperature from Daily Timeline",
+  "line": 12,
+  "name": "List of all of hotel within 10 miles radius of airport or downtown",
   "description": "",
-  "id": "verify-dark-sky-feature;verify-current-temperature-should-not-be-greater-or-less-than-the-temperature-from-daily-timeline",
+  "id": "verify-hotels.com-feature;list-of-all-of-hotel-within-10-miles-radius-of-airport-or-downtown",
   "type": "scenario",
   "keyword": "Scenario",
   "tags": [
     {
-      "line": 24,
-      "name": "@control-1"
+      "line": 11,
+      "name": "@hotels-2"
     }
   ]
 });
 formatter.step({
-  "line": 26,
-  "name": "I am Darksky Home Page",
+  "line": 13,
+  "name": "I am on locations search result screen",
   "keyword": "Given "
 });
 formatter.step({
-  "line": 27,
-  "name": "I verify current temp is not greater or less then temps from daily timeline",
+  "line": 14,
+  "name": "I verify system displays all hotels within 10 miles radius of airport",
   "keyword": "Then "
 });
+formatter.step({
+  "line": 15,
+  "name": "I verify Hilton Hotel is within 10 miles radius",
+  "keyword": "And "
+});
 formatter.match({
-  "location": "Scenario1SD.IAmOnDarkSkyHomePage()"
+  "location": "hotelScenario2.IamOnthelandingpage()"
 });
 formatter.result({
-  "duration": 4586769306,
+  "duration": 17018396052,
   "status": "passed"
 });
 formatter.match({
-  "location": "Scenario1SD.verifyLowAndHighTemDisplayCorectly()"
+  "arguments": [
+    {
+      "val": "10",
+      "offset": 43
+    }
+  ],
+  "location": "hotelScenario2.tenmilesaroundhotels(double)"
 });
 formatter.result({
-  "duration": 98562685,
+  "duration": 156002200879,
+  "status": "passed"
+});
+formatter.match({
+  "arguments": [
+    {
+      "val": "10 miles",
+      "offset": 32
+    }
+  ],
+  "location": "hotelScenario2.verifyHiltonHotelIsWithinRadious(double)"
+});
+formatter.result({
+  "duration": 2142086445,
   "status": "passed"
 });
 formatter.after({
-  "duration": 99259235,
+  "duration": 247679183,
   "status": "passed"
 });
 });
